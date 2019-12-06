@@ -16,27 +16,28 @@
 
           <header>
 
-            <a href="http://www.epam.com/" target="_blank"><img src="https://raw.githubusercontent.com/katerynivna/FL-12/work-in-progress/FL12_HW1/homework/logo.png" alt="EPAM logo"/></a>
+            <!-- <a href="http://www.epam.com/" target="_blank"> -->
+            <img id="logo" src="./epam.png" alt="EPAM logo"/></a>
             <h1>HTML Basics</h1>
             <hr>
             <nav>
-              <a href="#home"><strong>Home</strong></a>
+              <a href="#logo"><strong>Home</strong></a>
               <a href="#headings"><strong>Headings</strong></a>
               <a href="#text formats"><strong>Text formats</strong></a>
               <a href="#types of lists"><strong>Types of lists</strong></a>
               <a href="#table"><strong>Table</strong></a>
-              <a href="blockquotes"><strong>Blockquotes</strong></a>
-              <a href=""><strong>Registration</strong></a>
+              <a href="#blockquotes"><strong>Blockquotes</strong></a>
+              <a href="#registration"><strong>Registration</strong></a>
             </nav>
 
           </header>
           <hr>
 
-          <section id="home">
+          <div id="intro">
 
             <p>
                 Lorem ipsum dolor sit amet,
-                <a href="">test link</a>
+                <a href="#">test link</a>
                 adipiscing elit.
                 Nullam dignissim convallis est. Quisque aliquam.
                 <i>This is emphasized.</i>
@@ -64,9 +65,9 @@
             </p>
             <hr>
 
-          </section>
+          </div>
 
-          <section id="headings">
+          <div id="headings">
 
             <p>
               h1 defines the most important heading. h6 defines the least important heading. Font-size for h1 is the same as font-size for h2, because we have to use only one h1 on the page, and it is commonly used inside header
@@ -78,9 +79,9 @@
             <h6>Heading 6</h6>
             <hr>
 
-          </section>
+          </div>
 
-          <section id="text formats">
+          <div id="text formats">
 
             <h2>Text formats</h2>
             <h3>Article</h3>
@@ -111,9 +112,9 @@ aliign-items: center;
 </code>
 
 </pre>
-          </section>
+          </div>
 
-          <section id="types of lists">
+          <div id="types of lists">
 
             <h2>Unordered Wish List</h2>
             <ul>
@@ -163,9 +164,9 @@ aliign-items: center;
             <hr>
             <hr>
 
-          </section>
+          </div>
 
-          <section id="table">
+          <div id="table">
             <h2>Table</h2>
             <div>
               <table>
@@ -200,9 +201,9 @@ aliign-items: center;
                 </tbody>
               </table>
             </div>
-          </section>
+          </div>
 
-          <section id="blockquotes">
+          <div id="blockquotes">
             <h2>Blockquotes</h2>
             <p>Let’s keep it simple. Italics are good to help set it off from the body text. Be sure to style the citation.</p>
             <blockquote>
@@ -210,12 +211,21 @@ aliign-items: center;
               <a href="https://en.wikipedia.org/wiki/Robert_C._Martin">Robert C. Martin (Uncle Bob)</a>
             </blockquote>
             <hr>
-          </section>
+          </div>
 
-          <section>
-            <h2></h2>
-          </section>
+          <div id="registration">
+            <form id="registration form" action="#">
+              Username: <input type="text" name="username"><br>
+              Email: <input type="email" name="user email"><br>
+              Password: <input type="password" name="user password"><br>
+              <textarea rows="3" cols="25"></textarea><br>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
 
+          <footer>
+            <p>&copy; Copyright Epam Systems</p>
+          </footer>
 
 
         </div>
