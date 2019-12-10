@@ -1,4 +1,4 @@
-/*2*/
+/*2) hover effect for the navigation items */
 .tm-main-nav li:hover {
   background-color: lightskyblue;
   color: #fff;
@@ -10,11 +10,9 @@
   background: linear-gradient(90deg, lightskyblue 0%, burlywood 100%);
 }*/
 
-/*3*/
+/*3) gradient for the banner*/
 .tm-banner {
   background: linear-gradient(90deg, lightskyblue, burlywood);
-  margin: 5px;
-
 }
 
 .tm-banner-inner {
@@ -78,9 +76,12 @@
   display: inline-block;
 }
 
-
-/**/
-
+/*9) tm-team-description-container */
+.tm-team-description-container {
+  overflow: hidden;
+  margin-bottom: 30px;
+  background-color: #fff
+}
 /**/
 
 /**/
