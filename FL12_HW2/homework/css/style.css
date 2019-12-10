@@ -52,13 +52,18 @@
 /*8) styling to the “We are…” section*/
 .heading h2 {
   color: lightskyblue;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
 }
 .heading ol {
   list-style-type: lower-alpha;
   color: #000;
 }
+
+.heading ol li a {
+  color: #54a6f8;
+}
+
 .heading li:hover::before {
   content: ">";
   font-weight: bold;
@@ -82,12 +87,38 @@
   margin-bottom: 30px;
   background-color: #fff
 }
-/**/
 
-/**/
+/*9) formating for last paragraph and the title position*/
+.blocks .tm-team-description-container p:nth-child(3) {
+  font-style: oblique;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+}
 
-/**/
+.blocks h2.tm-section-title {
+  text-align: left;
+}
 
+/*10) Styling block with same images */
+.boxes .box-work {
+  padding: 10px;
+}
+.box-work p {
+  font-style: oblique;
+}
+.box-work p::first-letter {
+  font-weight: bold;
+}
+.box-work:nth-child(odd) {
+  color: #FFFFFF;
+  background-color: lightskyblue;
+}
+
+/*11) Setting paragraph indentation of the first line length to 25px and height of a line box 30px */
+p.tm-section-description {
+  text-indent: 25px;
+  line-height: 30px;
+}
 /**/
 
 /*SHADOW for EACH content box*/
