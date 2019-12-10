@@ -11,19 +11,19 @@
 }*/
 
 /*3*/
-.tm-banner{
+.tm-banner {
   background: linear-gradient(90deg, lightskyblue, burlywood);
   margin: 5px;
 
 }
 
-.tm-banner-inner{
+.tm-banner-inner {
   background: #FFFFFF;
 }
 
 /*4) The banner text should have a shadow. */
 
-.tm-banner-text{
+.tm-banner-text {
   margin: 5px;
   text-shadow: 5px 5px 2.5px #333;
 }
@@ -31,36 +31,51 @@
 /*5) Add animation to the banners text. Make it move from right (200px) to center.*/
 
 /*6) Add styles for “What we do” section */
-.flex-2-col{
+.flex-2-col {
   display: flex;
   flex-flow: row;
   align-items: center;/*применяется для текста и фото. а нужно только длоя текста*/
 }
 
-.flex-2-col h2.tm-section-title{
+.flex-2-col h2.tm-section-title {
   text-align: center;
 }
-.tm-section-description{
+.tm-section-description {
   text-indent: 25px;
 }
 
 /*7) hover effect to a gallery. работает кончено*/
-.gallery-container:hover{
-  background-color: lightskyblue;
-}
-.box-bg:hover{
+.box-bg:hover {
+  color: lightskyblue;
   background-color: lightgrey;
+  font-style: oblique;
 }
 
 /*8) styling to the “We are…” section*/
-.heading h2{
+.heading h2 {
   color: lightskyblue;
   font-weight: 300;
   text-align: center;
 }
-.heading li{
+.heading ol {
   list-style-type: lower-alpha;
   color: #000;
+}
+.heading li:hover::before {
+  content: ">";
+  font-weight: bold;
+  display: inline-block;
+}
+
+.text::after {
+  content: "New";
+  color: Red;
+  font-family: sans-serif;
+  font-size: 65%;
+  font-weight: bold;
+  font-variant: small-caps;
+  vertical-align: 45%;
+  display: inline-block;
 }
 
 
