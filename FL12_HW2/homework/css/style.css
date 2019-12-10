@@ -1,0 +1,80 @@
+/*2*/
+.tm-main-nav li:hover {
+  background-color: lightskyblue;
+  color: #fff;
+}
+
+/*
+.tm-banner{
+  background: lightskyblue;
+  background: linear-gradient(90deg, lightskyblue 0%, burlywood 100%);
+}*/
+
+/*3*/
+.tm-banner{
+  background: linear-gradient(90deg, lightskyblue, burlywood);
+  margin: 5px;
+
+}
+
+.tm-banner-inner{
+  background: #FFFFFF;
+}
+
+/*4) The banner text should have a shadow. */
+
+.tm-banner-text{
+  margin: 5px;
+  text-shadow: 5px 5px 2.5px #333;
+}
+
+/*5) Add animation to the banners text. Make it move from right (200px) to center.*/
+
+/*6) Add styles for “What we do” section */
+.flex-2-col{
+  display: flex;
+  flex-flow: row;
+  align-items: center;/*применяется для текста и фото. а нужно только длоя текста*/
+}
+
+.flex-2-col h2.tm-section-title{
+  text-align: center;
+}
+.tm-section-description{
+  text-indent: 25px;
+}
+
+/*7) hover effect to a gallery. работает кончено*/
+.gallery-container:hover{
+  background-color: lightskyblue;
+}
+.box-bg:hover{
+  background-color: lightgrey;
+}
+
+/*8) styling to the “We are…” section*/
+.heading h2{
+  color: lightskyblue;
+  font-weight: 300;
+  text-align: center;
+}
+.heading li{
+  list-style-type: lower-alpha;
+  color: #000;
+}
+
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/**/
+
+/*SHADOW for EACH content box*/
+.tm-content-box{
+  box-shadow: 0 0 10px #333
+}
