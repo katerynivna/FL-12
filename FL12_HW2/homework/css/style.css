@@ -36,7 +36,6 @@
      display: flex;
      flex-flow: row;
      align-items: center;
-    /*применяется для текста и фото. а нужно только длоя текста*/
 }
  .flex-2-col h2.tm-section-title {
      text-align: center;
@@ -144,7 +143,6 @@
      border-width: 40px 40px 0 0;
      border-color: lightskyblue transparent transparent transparent;
 }
-/**/
 /*1) Printer-friendly version of webpage*/
  @media print {
      body{
@@ -181,11 +179,6 @@
     }
      .heading ol li:nth-child( odd ){
          text-align: right;
-    }
-     .blocks .tm-team-description-container :nth-child(3) {
-         word-spacing: 10px !important;
-         letter-spacing: 5px !important;
-         font-style: oblique;
     }
      .tm-main-content, .carousel, .padding-medium {
          padding-top: 0px;
