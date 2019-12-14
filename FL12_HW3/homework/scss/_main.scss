@@ -1,0 +1,279 @@
+// @import "variables1";
+
+$font-family1: 'Source Sans Pro', sans-serif;
+$font-family2: 'Hind', sans-serif;
+// === COLORS FOR FIRST THEME ===
+$mainTColor: #21232E;
+$backGrColor: #212121;
+$buttonColor: #699900;
+$mainSectColor: #FFFFFF;
+$wordsColor: #14A0C7;
+$gradientColor1: #649412;
+$gradientColor2: #2c5bda;
+$opacity1: 0.8;
+// === SIZES ===
+$header_img: url("../img/m-h-day.jpg");
+
+.opacity {
+	opacity: $opacity1;
+}
+.border_radius {
+	border-radius: 7px;
+}
+
+@mixin blueRectangle {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	background-color: $wordsColor;
+}
+
+@mixin btn {
+	background-color: $buttonColor;
+	border: none;
+	border-radius: 3px;
+	color: $mainSectColor;
+	float: left;
+	padding: 10px 45px;
+	text-align: center;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: $font-family2;
+	cursor: pointer;	
+}
+
+body {
+	max-width: 1920px;
+	font-family: $font-family2;
+	margin: 0 auto;
+	padding-left: auto;
+	//display: flex;
+	//flex-direction: column;
+}
+
+header {
+	height: 720px;
+	background-image: $header_img;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: 100%;
+	color: $mainSectColor;
+	padding-left: 190px;
+	border-bottom-right-radius: 50em 17em;
+	background-color: $mainSectColor;
+}
+
+	.header-wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.landing-logo {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		font-weight: bold;
+		padding-top: 20px;
+		max-width: 8%;
+		display: flex;
+		img {
+			max-width: 100%;
+			height: 45px;
+			width: 45px;
+		}
+		p {
+			margin: 0;
+			//max-width: 50px;
+			height: auto;
+			text-align: center;
+			font-size: 17px;
+			color: $mainTColor;
+			span {
+				font-size: 50%;
+				text-align: center;
+				font-weight: lighter;
+				display: block;
+				
+			}			
+		}
+
+	}
+	.header_heading {
+		max-width: 650px;
+		color: black;
+		font-family: $font-family1;
+		font-size: 70px;
+		font-weight: bold;
+		color: $mainTColor;
+		line-height: 75px;
+		margin-bottom: 30px;
+		//margin-left: -7px;
+        position: relative;
+        z-index: 1;
+
+		&::after {
+		@include blueRectangle;
+		height: 50px;				
+		width: 295px;
+		top: 98px;
+		left: 0;
+		}
+	}
+
+
+
+	p.header_text {
+		//margin-bottom: 10px;
+		//content: "\A";
+		white-space: pre;
+		font-weight: lighter;
+		color: $mainTColor;
+		font-size: 15px;
+		letter-spacing: 1px;
+		margin-left: -58px;
+		@extend .opacity;
+
+	}
+
+	button.header_button {
+		@include btn;
+	}
+
+	a.login {
+		color: $mainSectColor;
+		font-weight: bold;
+		font-size: 20px;
+		margin-left: 160px;
+
+	}
+
+main {
+	background-color: $mainSectColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1120px;
+}
+
+.section_text {
+	font-family: $font-family1;
+	font-size: 43px;
+	font-weight: 600;
+	color: $mainTColor;
+	position: relative;
+	z-index: 1;
+
+	&::after {
+		@include blueRectangle;
+		height: 50px;				
+		width: 195px;
+		right: 12px;
+		bottom: 10px;		
+	}
+}
+
+.section_card_wrap {
+	display: flex;
+	flex-direction: column;	
+	justify-content: center;
+}
+
+.section_card {
+	background-color: $mainTColor;
+	height: 330px;
+	width: 1120px;
+	margin: 10px auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	@extend .border_radius;
+
+	.section_card_img {
+		margin-left: 20px;
+		width: 90%;
+		height: 290px;
+		object-fit: cover;
+		@extend .border_radius;
+	}
+
+	.section_card_right_container {
+		color: $mainSectColor;	
+		//margin-left: 10px;
+		//padding-left: 60px;
+		//padding-right: 30px;
+		//margin-right: 70px;
+		text-align: center;
+
+		.section_card_heading {
+			font-weight: bold;
+			font-size: 140%;
+		}
+
+		.section_card_text {
+			text-align: justify;
+			@extend .opacity;
+		}
+
+		.section_link {
+			color: $mainSectColor;
+			@extend .opacity;
+		}
+	}
+}
+
+.section_banner {
+	margin-top: 140px;
+	width: 1200px;
+	height: 150px;
+	background: rgb(100,148,18);
+    background: linear-gradient(45deg, $gradientColor1 0%, $gradientColor2 100%);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	@extend .border_radius;
+	
+	.section_banner_text_wrap {
+		font-family: $font-family1;
+
+		.section_banner_heading {
+			margin: 0 auto;
+			font-size: 30px;
+			font-weight: 600;
+			color: $mainTColor;
+			position: relative;
+			z-index: 1;
+
+			&::after {
+				@include blueRectangle;
+				height: 55px;				
+				width: 60px;
+				left: 117px;
+				bottom: 1px;
+			}
+		}
+
+		.section_banner_text {
+			color: $mainSectColor;
+			opacity: 0.5;
+		}
+	}
+
+	button.section_banner_button {
+		@include btn;
+	}
+
+
+}
+
+footer {
+	position: relative;
+	z-index: 1;
+	height: 250px;
+	background-color: $mainTColor;
+}
+
