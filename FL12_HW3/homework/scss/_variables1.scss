@@ -1,4 +1,20 @@
+// === FONTS ===
 $font-family1: 'Source Sans Pro', sans-serif;
 $font-family2: 'Hind', sans-serif;
-
-$main_color1: #2B2E3B;
+// === IMG ===
+$header_img: url("../img/m-h-day.jpg");
+// === COLORS ===
+$mainSectColor: #21232E;
+$mainBackgrColor: #FFFFFF;
+$textColor: #FFFFFF;
+$headerTextColor: #2C2F3C;
+$gradientColor1: #649412;
+$gradientColor2: #2c5bda;
+$opacity1: 0.8;
+// === MAP ===
+$mappedColors: (
+	colorForPage: #FFFFFF,
+	buttonColor: #699900,
+	blocksAndFooter: #21232E,
+	wordsColor: #14A0C7
+);
