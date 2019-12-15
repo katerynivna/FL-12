@@ -1,18 +1,4 @@
-// @import "variables1";
-
-$font-family1: 'Source Sans Pro', sans-serif;
-$font-family2: 'Hind', sans-serif;
-// === COLORS FOR FIRST THEME ===
-$mainTColor: #21232E;
-$backGrColor: #212121;
-$buttonColor: #699900;
-$mainSectColor: #FFFFFF;
-$wordsColor: #14A0C7;
-$gradientColor1: #649412;
-$gradientColor2: #2c5bda;
-$opacity1: 0.8;
-// === SIZES ===
-$header_img: url("../img/m-h-day.jpg");
+@import "variables2";
 
 .opacity {
 	opacity: $opacity1;
@@ -25,30 +11,34 @@ $header_img: url("../img/m-h-day.jpg");
 	content: "";
 	position: absolute;
 	z-index: -1;
-	background-color: $wordsColor;
+	background-color: map-get($mappedColors, wordsColor);
 }
 
 @mixin btn {
-	background-color: $buttonColor;
+	background-color: map-get($mappedColors, buttonColor);
 	border: none;
 	border-radius: 3px;
-	color: $mainSectColor;
+	color: $textColor;
 	float: left;
 	padding: 10px 45px;
 	text-align: center;
 	font-size: 17px;
 	font-weight: bold;
-	font-family: $font-family2;
+	font-family: $font-family1;
 	cursor: pointer;	
+}
+
+@mixin links {
+	color: $textColor;
+	@extend .opacity;
 }
 
 body {
 	max-width: 1920px;
-	font-family: $font-family2;
+	font-family: $font-family1;
 	margin: 0 auto;
 	padding-left: auto;
-	//display: flex;
-	//flex-direction: column;
+	background-color: map-get($mappedColors, colorForPage);
 }
 
 header {
@@ -56,8 +46,8 @@ header {
 	background-image: $header_img;
 	background-repeat: no-repeat;
 	background-position: center; 
-	background-size: 100%;
-	color: $mainSectColor;
+	background-size: cover;
+	color: $mainBackgrColor;
 	padding-left: 190px;
 	border-bottom-right-radius: 50em 17em;
 	background-color: $mainSectColor;
@@ -74,41 +64,41 @@ header {
 		justify-content: flex-start;
 		align-items: center;
 		font-weight: bold;
-		padding-top: 20px;
-		max-width: 8%;
 		display: flex;
+		margin-top: 20px;
+		color: $headerTextColor;
+		
 		img {
-			max-width: 100%;
 			height: 45px;
 			width: 45px;
 		}
+		
 		p {
-			margin: 0;
-			//max-width: 50px;
+			margin: 0 0 0 15px;
 			height: auto;
 			text-align: center;
-			font-size: 17px;
-			color: $mainTColor;
+			font-size: 23px;
+			color: $headerTextColor;
+			font-stretch: condensed;
+			line-height: 80%;
+			@extend .opacity;
 			span {
 				font-size: 50%;
 				text-align: center;
 				font-weight: lighter;
 				display: block;
-				
 			}			
 		}
-
 	}
 	.header_heading {
 		max-width: 650px;
-		color: black;
 		font-family: $font-family1;
 		font-size: 70px;
 		font-weight: bold;
-		color: $mainTColor;
+		@extend .opacity;
+		color: $headerTextColor;
 		line-height: 75px;
 		margin-bottom: 30px;
-		//margin-left: -7px;
         position: relative;
         z-index: 1;
 
@@ -121,35 +111,31 @@ header {
 		}
 	}
 
-
-
 	p.header_text {
-		//margin-bottom: 10px;
-		//content: "\A";
 		white-space: pre;
 		font-weight: lighter;
-		color: $mainTColor;
+		color: $headerTextColor;
 		font-size: 15px;
 		letter-spacing: 1px;
 		margin-left: -58px;
 		@extend .opacity;
-
 	}
 
 	button.header_button {
 		@include btn;
+		position: relative;
 	}
 
 	a.login {
-		color: $mainSectColor;
+		position: absolute;
 		font-weight: bold;
-		font-size: 20px;
+		font-size: 21px;
 		margin-left: 160px;
-
+		@include links;
 	}
 
 main {
-	background-color: $mainSectColor;
+	background-color: $mainBackgrColor;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -163,9 +149,9 @@ main {
 	font-family: $font-family1;
 	font-size: 43px;
 	font-weight: 600;
-	color: $mainTColor;
+	color: $headerTextColor;
 	position: relative;
-	z-index: 1;
+	z-index: 2;
 
 	&::after {
 		@include blueRectangle;
@@ -180,12 +166,13 @@ main {
 	display: flex;
 	flex-direction: column;	
 	justify-content: center;
+	margin-bottom: 200px;
 }
 
 .section_card {
-	background-color: $mainTColor;
+	background-color: map-get($mappedColors, blocksAndFooter);
 	height: 330px;
-	width: 1120px;
+	width: 1115px;
 	margin: 10px auto;
 	display: flex;
 	flex-direction: row;
@@ -202,25 +189,25 @@ main {
 
 	.section_card_right_container {
 		color: $mainSectColor;	
-		//margin-left: 10px;
-		//padding-left: 60px;
-		//padding-right: 30px;
-		//margin-right: 70px;
+		margin-left:85px;
+    	margin-right: 105px;
 		text-align: center;
 
 		.section_card_heading {
-			font-weight: bold;
+			color: $textColor;
 			font-size: 140%;
+			@extend .opacity;
 		}
 
 		.section_card_text {
+			font-family: $font-family2;
 			text-align: justify;
+			color: $textColor;
 			@extend .opacity;
 		}
 
 		.section_link {
-			color: $mainSectColor;
-			@extend .opacity;
+			@include links;
 		}
 	}
 }
@@ -236,15 +223,18 @@ main {
 	align-items: center;
 	justify-content: space-around;
 	@extend .border_radius;
-	
+	position: absolute;
+	z-index: 1;
+	margin-top: 690px;
+
 	.section_banner_text_wrap {
-		font-family: $font-family1;
 
 		.section_banner_heading {
+			font-family: $font-family1;
 			margin: 0 auto;
 			font-size: 30px;
 			font-weight: 600;
-			color: $mainTColor;
+			color: $headerTextColor;
 			position: relative;
 			z-index: 1;
 
@@ -258,22 +248,42 @@ main {
 		}
 
 		.section_banner_text {
-			color: $mainSectColor;
+			color: $textColor;
 			opacity: 0.5;
 		}
 	}
-
 	button.section_banner_button {
-		@include btn;
+	@include btn;
 	}
-
-
 }
 
 footer {
-	position: relative;
-	z-index: 1;
 	height: 250px;
-	background-color: $mainTColor;
+	background-color: map-get($mappedColors, blocksAndFooter);
+	display: flex;
 }
 
+.footer-wrap {
+	margin-top: 80px;
+	width: 1920px;
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-around;
+	color: white;
+	color: $mainSectColor;
+	@extend .opacity;
+
+	.footer_text {
+		width: 300px;
+		line-height: 140%;
+		font-size: 14px;
+		color: white;
+	}
+	p {
+		color: $textColor;
+	}
+	.footer-cr {
+		color: $textColor;
+	}
+}
