@@ -2,7 +2,6 @@
   .opacity, .header_navbar .header_navigation .nav_item, .posts .post_descr, .posts button.post_btn {
     opacity: 0.7;
   }
-
   .btn, .h_page button.h_button, .posts button.post_btn {
     background-color: #fff;
     color: #777;
@@ -15,7 +14,6 @@
     background-color: #bfba55;
     color: #fff;
   }
-
   body {
     background-color: white;
     height: 100%;
@@ -23,11 +21,9 @@
     max-width: 1920px;
     align-items: center;
   }
-
   .header_wrap {
     height: 100%;
   }
-
   .header_navbar {
     height: 80px;
     display: flex;
@@ -59,7 +55,6 @@
   .header_navbar .header_navigation .nav_item:hover {
     color: #bfba55;
   }
-
   .h_page {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/home-bg.jpg");
@@ -97,7 +92,6 @@
     text-transform: uppercase;
     font-weight: bold;
   }
-
   main {
     margin: auto;
   }
@@ -107,7 +101,6 @@
     height: 0;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
   }
-
   .section_wrap {
     display: flex;
     flex-direction: column;
@@ -118,7 +111,6 @@
   .section_wrap .section_hidden_h {
     display: none;
   }
-
   .posts {
     max-width: 930px;
   }
@@ -183,7 +175,6 @@
     font-size: 100%;
     width: 180px;
   }
-
   .footer {
     background-color: black;
     height: 400px;
