@@ -3,11 +3,7 @@ let a1 = prompt('a: ');
 let b1 = prompt('b: ');
 let c1 = prompt('c: ');
 
-if (isNaN(a1) || a1 === undefined || a1 === '' ||
-    isNaN(b1) || b1 === undefined || b1 === '' ||
-    isNaN(c1) || c1 === undefined || c1 === '') {
-    console.log('input values should be ONLY numbers');
-} else {
+if (a1 !== undefined && a1 !== '' && b1 !== undefined && b1 !== '' && c1 !== undefined && c1 !== '') {
     const a = parseInt(a1);
     const b = parseInt(b1);
     const c = parseInt(c1);
@@ -24,4 +20,6 @@ if (isNaN(a1) || a1 === undefined || a1 === '' ||
     } else {
         console.log("Triangle doesn't exist");
     }
+} else {
+	console.log('input values should be ONLY numbers');
 }
