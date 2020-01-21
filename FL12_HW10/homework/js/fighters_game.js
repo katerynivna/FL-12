@@ -96,8 +96,3 @@ function battle(fighter1, fighter2) {
         } 
     }
 }
-
-const myFighter = new Fighter('Maximus', '20', '100', '20', '15');
-const myFighter2 = new Fighter('Commodus', '25', '90', '25', '20');
-
-battle(myFighter, myFighter2);
