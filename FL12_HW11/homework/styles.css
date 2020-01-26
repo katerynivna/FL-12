@@ -1,0 +1,11 @@
+#root {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+.emptyFolder {
+    font-style: italic;
+}
