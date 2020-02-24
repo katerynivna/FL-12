@@ -73,9 +73,9 @@ class Player {
             let cardOfOne = playerOne.deck.draw(1);
             let cardOfTwo = playerTwo.deck.draw(1);
             if (Card.Compare(cardOfOne, cardOfTwo) === 1) {
-                console.log(playerOne._wins++);
+                playerOne._wins++;
             } else if (Card.Compare(cardOfOne, cardOfTwo) === -1) {
-                console.log(playerTwo._wins++);
+                playerTwo._wins++;
             }
         }
 
@@ -93,4 +93,3 @@ let p1 = new Player('P1');
 let p2 = new Player('P2');
 
 Player.Play(p1, p2);
-console.log();
