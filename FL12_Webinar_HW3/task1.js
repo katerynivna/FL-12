@@ -43,9 +43,9 @@ class Deck {
         const rank = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'];
         this.cards = [];
 
-        for (let r = 1; r <= rank.length; r++) {
-            for (let s = 0; s < suit.length; s++) {
-                this.cards.push(new Card(suit, rank));
+        for (let s in suit) {
+            for (let r in rank) {
+                this.cards.push(`${rank[r]} of ${suit[s]}`);
             }
         }
     }
@@ -56,7 +56,8 @@ class Deck {
 
     shuffle() {
         const { cards } = this;
-        let m = cards.length, i;
+        let m = cards.length;
+        let i;
         while(m) {
             i = Math.floor(Math.random() * m--);
             [cards[m], cards[i]] = [cards[i], cards[m]];
@@ -66,4 +67,4 @@ class Deck {
 }
 
 let testDeck = new Deck();
-console.log();
+console.log(testDeck.shuffle());
