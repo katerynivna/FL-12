@@ -55,10 +55,15 @@ class Deck {
     }
 
     shuffle() {
-
+        const { cards } = this;
+        let m = cards.length, i;
+        while(m) {
+            i = Math.floor(Math.random() * m--);
+            [cards[m], cards[i]] = [cards[i], cards[m]];
+        }
+        return this;
     }
 }
 
-let testDeck = new Deck;
-
-console.log(testDeck);
+let testDeck = new Deck();
+console.log();
