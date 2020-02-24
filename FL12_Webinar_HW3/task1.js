@@ -32,7 +32,8 @@ class Card {
     }
 
     toString() {
-        return `${this.rank} of ${this.suit}`;
+        let facesNames = { 1: 'Ace', 11: 'Jack', 12: 'Queen', 13: 'King'};
+        return `${this.isFaceCard ? facesNames[this.rank] : this.rank} of ${this.suit}`;
     }
 }
 
@@ -40,12 +41,12 @@ class Deck {
 
     constructor() {
         const suit = ['hearts', 'diamonds', 'clubs', 'spades'];
-        const rank = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13'];
+        let rank = 13;
         this.cards = [];
 
         for (let s in suit) {
-            for (let r in rank) {
-                this.cards.push(new Card(s, r));//`${rank[r]} of ${suit[s]}`);
+            for (let r = 1; r <= rank; r++) {
+                this.cards.push(new Card(suit[s], r));//`${rank[r]} of ${suit[s]}`);
             }
         }
     }
@@ -71,7 +72,16 @@ class Deck {
 }
 
 class Player {
-    
+
+    constructor(name) {
+        this.name = name;
+        this.wins = 0;
+        this.deck = new Deck();
+    }
+
+    static Play(playerOne, playerTwo) {
+
+    }
 }
 
 let testDeck = new Deck();
