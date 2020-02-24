@@ -48,6 +48,17 @@ class Deck {
                 this.cards.push(new Card(suit, rank));
             }
         }
+    }
+
+    get count() {
+        return this.cards.length;
+    }
+
+    shuffle() {
 
     }
 }
+
+let testDeck = new Deck;
+
+console.log(testDeck);
