@@ -28,11 +28,11 @@ class Card {
     }
 
     get isFaceCard() {
-        return this.rank === 1 || this.rank > 10 
+        return this.rank === 1 || this.rank > 10;
     }
 
     toString() {
-
+        return `${this.rank} of ${this.suit}`;
     }
 }
 
@@ -45,7 +45,7 @@ class Deck {
 
         for (let s in suit) {
             for (let r in rank) {
-                this.cards.push(`${rank[r]} of ${suit[s]}`);
+                this.cards.push(new Card(s, r));//`${rank[r]} of ${suit[s]}`);
             }
         }
     }
@@ -64,7 +64,15 @@ class Deck {
         }
         return this;
     }
+
+    draw(n) {
+        return this.cards.splice(-n, n);
+    }
+}
+
+class Player {
+    
 }
 
 let testDeck = new Deck();
-console.log(testDeck.shuffle());
+console.log(testDeck);
