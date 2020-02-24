@@ -41,11 +41,11 @@ class Deck {
 
     shuffle() {
         const { cards } = this;
-        let m = cards.length;
         let i;
-        while(m) {
-            i = Math.floor(Math.random() * m--);
-            [cards[m], cards[i]] = [cards[i], cards[m]];
+        let j = cards.length;
+        while(j) {
+            i = Math.floor(Math.random() * j--);
+            [cards[j], cards[i]] = [cards[i], cards[j]];
         }
         return this;
     }
@@ -70,9 +70,21 @@ class Player {
 
     static Play(playerOne, playerTwo) {
         while (playerOne.deck.cards.length && playerTwo.deck.cards.length){
-            //let cardOne = playerOne.deck.cards.pop();
-            //let cardTwo = playerTwo.deck.cards.pop();
+            let cardOfOne = playerOne.deck.draw(1);
+            let cardOfTwo = playerTwo.deck.draw(1);
+            if (Card.Compare(cardOfOne, cardOfTwo) === 1) {
+                console.log(playerOne._wins++);
+            } else if (Card.Compare(cardOfOne, cardOfTwo) === -1) {
+                console.log(playerTwo._wins++);
+            }
+        }
 
+        if (playerOne._wins > playerTwo._wins) {
+            console.log(`${playerOne.name} wins ${playerOne._wins} to ${playerTwo._wins}`);
+        } else if (playerTwo._wins > playerOne._wins){
+            console.log(`${playerTwo.name} wins ${playerTwo._wins} to ${playerOne._wins}`);
+        } else {
+            console.log(`It's a tie this time`);
         }
     }
 }
@@ -80,4 +92,5 @@ class Player {
 let p1 = new Player('P1');
 let p2 = new Player('P2');
 
-//Player.Play(p1, p2);
+Player.Play(p1, p2);
+console.log();
