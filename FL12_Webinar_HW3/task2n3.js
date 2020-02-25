@@ -49,10 +49,18 @@ class Employee {
         Employee.EMPLOYEES.splice(arrayIndex, 1);
     }
 
+    retire() {
+        let arrayIndex = Employee.EMPLOYEES.indexOf(this);
+        console.log('It was such a pleasure to work with you!');
+        Employee.EMPLOYEES.splice(arrayIndex, 1);
+    }
+
+    
+
 }
 
 let Kate = new Employee(1, 'Kate', 'Ovch', '1993/10/07', '100', 'none', 'testDept');
-let Olga = new Employee(2, 'olg', 'olgov', '1982/05/10', 200, 'position2', 'test');
+let Olga = new Employee(2, 'olg', 'olgov', '1982/05/10', '200', 'position2', 'test');
 
-console.log(Olga.quit());
+//console.log(Olga.quit());
 
