@@ -1,5 +1,6 @@
 const testArr = [1, 2, 3, 4, 56, 7, 8, 76, 5, 241, 5, 356, 567, 2];
 const testNumber = '0123456789';
+const lastFourDigits = 4;
 
 //task 1
 function maxElement(array) {
@@ -28,4 +29,9 @@ function findUniqueElements(array) {
 //console.log(findUniqueElements(testArr));
 
 //task 6
-function hideNumber
+function hideNumber(phoneNumber) {
+    let numberLength = phoneNumber.length;
+    let numberTail = phoneNumber.slice(numberLength - lastFourDigits, numberLength + 1);
+    return numberTail.padStart(numberLength, "*");
+}
+//console.log(hideNumber(testNumber));
