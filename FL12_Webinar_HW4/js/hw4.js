@@ -1,6 +1,10 @@
 const testArr = [1, 2, 3, 4, 56, 7, 8, 76, 5, 241, 5, 356, 567, 2];
 const testNumber = '0123456789';
 const lastFourDigits = 4;
+const testObj = {
+    key1: "value1",
+    key2: 2
+};
 
 //task 1
 function maxElement(array) {
@@ -18,6 +22,12 @@ function copyArray(array) {
 //console.log(copyArray(testArr));
 
 //task 3
+function addUniqueId(object) {
+    return { ...object, uniqueId: Symbol() };
+}
+
+console.log(addUniqueId(testObj));
+console.log(testObj)
 //task 4
 
 
@@ -30,8 +40,10 @@ function findUniqueElements(array) {
 
 //task 6
 function hideNumber(phoneNumber) {
-    let numberLength = phoneNumber.length;
+    const numberLength = phoneNumber.length;
     let numberTail = phoneNumber.slice(numberLength - lastFourDigits, numberLength + 1);
     return numberTail.padStart(numberLength, "*");
 }
 //console.log(hideNumber(testNumber));
+
+//task 7
